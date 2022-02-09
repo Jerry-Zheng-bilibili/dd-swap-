@@ -5,7 +5,7 @@ if [ $EUID -ne 0 ]; then
    exit 1
 fi
 
-if find /mnt/swap; then
+if [ find /mnt/swap ]; then
    echo -e '${red}请勿重复添加或删除原有的再添加${plain}'
 fi
 
