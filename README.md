@@ -1,4 +1,5 @@
 # dd硬盘成swap大小的
+逐步执行命令
 ```
 添加swap为2G
 dd if=/dev/zero of=/mnt/swap bs=1M count=2048
@@ -13,7 +14,7 @@ echo '/mnt/swap swap swap defaults 0 0' >> /etc/fstab
 
 如果不想换算的话就吧bs后面的换成1G就好了，这样count后面的就只要填你所想要的GB大小了
 
-#一键脚本
+#一键脚本默认添加2Gswap
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/Jerry-Zheng-bilibili/dd-swap-/main/ddswap.sh && chmod +x ddswap.sh && bash ddswap.sh
 ```
