@@ -11,6 +11,7 @@ echo '/mnt/swap swap swap defaults 0 0' >> /etc/fstab
 ```
 只要将count后面的数字换成你想要的大小就可以了，
 如果不想换算的话就吧bs后面的换成1G就好了，这样count后面的就只要填你所想要的GB大小了
+
 #一键脚本
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/Jerry-Zheng-bilibili/dd-swap-/main/ddswap.sh && chmod +x ddswap.sh && bash ddswap.sh
