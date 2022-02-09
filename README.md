@@ -1,4 +1,4 @@
-# dd-swap-
+# dd硬盘成swap大小的
 这个是dd2GBswap的
 ```
 dd if=/dev/zero of=/mnt/swap bs=1M count=2048
