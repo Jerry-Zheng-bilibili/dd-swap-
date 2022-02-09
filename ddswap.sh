@@ -6,7 +6,7 @@ if [ $EUID -ne 0 ]; then
 fi
 
 if find /mnt/swap; then
-   echo -e '请勿重复添加或删除原有的再添加'
+   echo -e '你已经在此目录下拥有swap请勿重复添加或删除原有的再添加'
    exit
 else
    echo -e '可以继续添加'
