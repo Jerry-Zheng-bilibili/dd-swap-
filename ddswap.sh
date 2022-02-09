@@ -6,9 +6,10 @@ if [ $EUID -ne 0 ]; then
 fi
 
 if find /mnt/swap; then
-   echo -e '{red}请勿重复添加或删除原有的再添加{plain}'
+   echo -e '请勿重复添加或删除原有的再添加'
+   exit
 else
-   echo -e '{green}可以继续添加{plain}'
+   echo -e '可以继续添加'
 fi
 
 echo -e "Input how many swap you want to make (MB)\n Eg.2048"
