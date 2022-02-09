@@ -1,9 +1,12 @@
 # dd硬盘成swap大小的
-这个是dd2GBswap的
 ```
+添加swap为2G
 dd if=/dev/zero of=/mnt/swap bs=1M count=2048
+设置交换分区的文件
 mkswap /mnt/swap
+启动swap分区
 swapon /mnt/swap
+设置开机时自启用 swap 分区，需要修改文件 /etc/rc.local  中的 swap 行，添加以下代码
 echo '/mnt/swap swap swap defaults 0 0' >> /etc/fstab
 ```
 只要将count后面的数字换成你想要的大小就可以了，
