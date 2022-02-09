@@ -7,7 +7,7 @@ fi
 
 if find /mnt/swap; then
    echo -e '${red}请勿重复添加或删除原有的再添加${plain}'
-else;
+elif
    echo -e '可以添加'
 fi
 
