@@ -6,7 +6,7 @@ if [ $EUID -ne 0 ]; then
 fi
 
 echo -e "Input how many swap you want to make (MB)\n Eg.2048"
-echo "Worning Do not use oversized space"
+echo "Warning Do not use oversized space"
 read coun
 dd if=/dev/zero of=/mnt/swap bs=1M count=$coun
 
