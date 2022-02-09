@@ -15,3 +15,4 @@ echo '/mnt/swap swap swap defaults 0 0' >> /etc/fstab
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/Jerry-Zheng-bilibili/dd-swap-/main/ddswap.sh && chmod +x ddswap.sh && bash ddswap.sh
 ```
+这个会在原来的基础之上添加swap分区
