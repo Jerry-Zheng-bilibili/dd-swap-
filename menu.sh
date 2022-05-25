@@ -1,12 +1,13 @@
 #!/bin/bash
 #Identify USER
-
 if [ $EUID -ne 0 ]; then
    echo "This script must be run as root" 1>&2
    exit 1
 fi
 
-function menu(
+wget -N --no-check-certificate https://raw.githubusercontent.com/Jerry-Zheng-bilibili/dd-swap-/main/ddswap.sh
+
+
 clear
 
 echo "1) Create Swap"
@@ -16,34 +17,40 @@ echo "2) Disable Swap"
 echo "3) Enable Swap"
 
 echo "0) Exit"
-)
+read choise
 
 #createSwap
-function 1(
+function createSwap() (
 
 clear
-bash ddswap.sh -D
+bash $(pwd)/ddswap.sh -D
 
 )
 
 #offSwap
-function 3(
+function offSwap() (
 clear
 
 swapoff /mnt/swap
 )
 
 #onSwap
-function 2(
+function onSwap() (
 clear
 
 swapon /mnt/swap
 )
 
-#Exit
-function 0(
-exit 0
-)
 
-exit 0
 
+case $choise in
+   1)
+   createSwap;;
+   2)
+   disableSwap;;
+   3)
+   enableSwap;;
+   0)
+   echo "Bye"
+   exit 1;;
+esac
