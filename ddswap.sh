@@ -12,7 +12,7 @@ else
    echo -e '可以继续添加'
 fi
 
-if [ "$1" == "-default" ]; then
+if [ "$1" == "-D" ]; then
     dd if=/dev/zero of=/mnt/swap bs=1M count=2048
 else
     echo -e "Input how many swap you want to make (MB)\n Eg.2048"
