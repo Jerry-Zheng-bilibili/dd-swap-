@@ -14,8 +14,8 @@ echo '/mnt/swap swap swap defaults 0 0' >> /etc/fstab
 
 如果不想换算的话就吧bs后面的换成1G就好了，这样count后面的就只要填你所想要的GB大小了
 
-#一键脚本默认添加2Gswap
+#一键脚本默认打开菜单，选1会自动创建2G的swap在```/mnt```下
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/Jerry-Zheng-bilibili/dd-swap-/main/ddswap.sh && chmod +x ddswap.sh && bash ddswap.sh -default
+wget -N --no-check-certificate https://raw.githubusercontent.com/Jerry-Zheng-bilibili/dd-swap-/main/menu.sh && chmod +x menu.sh && menu.sh
 ```
 这个会在原来的基础之上添加swap分区
