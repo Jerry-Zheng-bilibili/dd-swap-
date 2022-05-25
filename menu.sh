@@ -47,9 +47,9 @@ case $choise in
    1)
    createSwap;;
    2)
-   disableSwap;;
+   offSwap;;
    3)
-   enableSwap;;
+   onSwap;;
    0)
    echo "Bye"
    exit 1;;
