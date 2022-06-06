@@ -16,6 +16,6 @@ echo '/mnt/swap swap swap defaults 0 0' >> /etc/fstab
 
 #一键脚本默认打开菜单，选1会自动创建2G的swap在```/mnt```下
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/Jerry-Zheng-bilibili/dd-swap-/main/menu.sh && chmod +x menu.sh && menu.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/Jerry-Zheng-bilibili/dd-swap-/main/menu.sh && chmod +x menu.sh && ./menu.sh
 ```
 这个会在原来的基础之上添加swap分区
