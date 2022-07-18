@@ -38,6 +38,7 @@ function offSwap() (
 function onSwap() (
     clear
     swapon /mnt/swap
+    free -h
 )
 
 #uninstallSwap
