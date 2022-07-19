@@ -25,7 +25,7 @@ read choise
 #createSwap
 function createSwap() (
     clear
-    bash $(pwd)/ddswap.sh
+    bash $(pwd)/ddswap.sh -D
 )
 
 #offSwap
